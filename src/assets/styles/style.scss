@@ -1,0 +1,34 @@
+.header {
+    height: 100vh;
+    background: url('../images/travelTime.png') center center/cover no-repeat;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    &-link a {
+        cursor: pointer;
+        position: relative;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #fff;
+    }
+    &-link a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #fff;
+        opacity: .5;
+        transition: width 0.3s ease-out;
+        border-radius: 2px;
+    }
+    &-link a:hover:after,
+    &-link a:focus:after {
+        width: 100%;
+    }
+}
