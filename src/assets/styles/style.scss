@@ -52,9 +52,9 @@
         height: 60px;
         color: #fff;
         padding: 16px 28px;
-        background: #00B43D;
-        box-shadow: 0 0 40px 40px #00B43D inset, 0 0 0 0 #00B43D;
-        -webkit-transition: all 150ms ease-in-out;
+        background: rgba(187, 187, 187, 0.2);
+        box-shadow: 0 0 8px #363636;
+        backdrop-filter: blur(3px);
         transition: all 130ms ease-in-out;
         border-radius: 8px;
         font-weight: 500;
@@ -67,22 +67,26 @@
         outline: 0;
         animation: move .5s ease-in-out;
         &:hover {
-            box-shadow: 0 0 10px 0 #4dd57a inset, 0 0 10px 4px #4dd57a;
+            box-shadow: 0 0 5px 0 #bfbfbf inset, 0 0 5px 4px #bfbfbf;
         }
         &:active {
-            background: #2ba253;
-            padding: 18px 30px;
+            background: rgba(187, 187, 187, 0.4);
+            padding: 18px 28px;
         }
     }
 }
 
-.Arton {
+.arton {
     display: flex;
     justify-content: center;
+    &__icon {
+        padding-top: 6px;
+    }
 }
 
 .gallery {
     background: rgb(149, 149, 149);
+    background: url('../images/gallery-bg.jpg') center center/cover no-repeat;
     padding: 126px 132px;
     &__items {
         margin-top: 50px;
@@ -92,10 +96,16 @@
     &__card {
         width: 320px;
         height: 586px;
-        background: rgba(88, 88, 88, 0.5);
+        background: rgba(88, 88, 88, 0.4);
         padding: 24px 30px;
+        box-shadow: 0 0 4px rgb(54 54 54);
+        backdrop-filter: blur(3px);
         &-img img {
             width: 100%;
+            transition-duration: .275s;
+            &:hover {
+                transform: scale(1.025);
+            }
         }
         &-title {
             font-weight: 500;
@@ -119,17 +129,19 @@
             text-align: center;
             width: 100px;
             height: 39px;
-            background: #4e4e4e73;
+            background: #38383873;
+            border: 1px solid #21212173;
             border-radius: 8px;
             padding: 6px 17px;
             font-weight: 500;
             font-size: 11px;
             line-height: 28px;
             &:hover {
-                box-shadow: 0 0 10px 0 #42424273 inset, 0 0 10px 4px #42424273;
+                box-shadow: 0 0 10px 0 #21212173 inset, 0 0 10px 4px #21212173;
+                background: #21212173;
             }
             &:active {
-                background: #4e4e4e73;
+                background: #21212173;
                 padding: 8px 19px;
             }
         }
@@ -147,5 +159,14 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
     }
 }

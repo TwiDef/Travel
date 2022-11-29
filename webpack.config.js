@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const webpack = require("webpack");
 
 
 module.exports = {
@@ -36,6 +37,11 @@ module.exports = {
             title: "God Of War",
             template: "src/index.html",
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        })
     ],
 };
 // yarn dev
