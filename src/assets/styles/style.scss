@@ -148,6 +148,22 @@
     }
 }
 
+.about {
+    padding: 125px 125px;
+    height: 100vh;
+    background: url('../images/about-bg.jpg') center center/cover no-repeat;
+    &__title {
+        text-align: center;
+    }
+    &__text {
+        padding-top: 60px;
+        font-weight: 275;
+        font-size: 32px;
+        line-height: 48px;
+        opacity: .7;
+    }
+}
+
 
 /* Animations */
 
