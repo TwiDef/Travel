@@ -4,12 +4,19 @@ import 'jquery/dist/jquery.js';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
+const mobileMenuBtn = document.querySelector('.mobile__menu-btn');
+const mobileMenu = document.querySelector('.mobile');
+
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});
+
 
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
         loop: true,
         items: 4,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 2000,
         smartSpeed: 500,
         autoplayHoverPause: true,
@@ -19,7 +26,6 @@ $(document).ready(function() {
                 items: 1,
                 autoWidth: true,
                 margin: 20,
-                center: true
             },
             1001: {
                 items: 2,
