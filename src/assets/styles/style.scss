@@ -213,6 +213,10 @@
     display: none;
 }
 
+.scroll-none {
+    overflow-y: hidden;
+}
+
 
 /* Media */
 
@@ -252,8 +256,8 @@
         padding: 32px 28px;
         &__text {
             padding-top: 23px;
-            font-size: 26px;
-            line-height: 45px;
+            font-size: 24px;
+            line-height: 43px;
         }
     }
 }
@@ -270,13 +274,16 @@
             }
         }
     }
+    .gallery {
+        padding: 80px 90px;
+    }
     .gallery__mobile {
         margin-top: 20px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
-        row-gap: 30px;
-        column-gap: 16px;
+        row-gap: 68px;
+        column-gap: 20px;
         &-items {
             margin-top: 50px;
             display: flex;
@@ -335,6 +342,9 @@
 @media (max-width: 840px) {
     .header {
         padding: 25px 25px;
+        &__nav {
+            display: none;
+        }
     }
     .mobile__menu-btn {
         cursor: pointer;
@@ -380,9 +390,10 @@
             transform: scale(0);
         }
     }
-    .header {
-        &__nav {
-            display: none;
+    .about {
+        &__text {
+            font-size: 20px;
+            line-height: 26px;
         }
     }
 }
@@ -409,6 +420,60 @@
             background: #21212173;
             padding: 10px 14px;
         }
+    }
+}
+
+@media (max-width: 510px) {
+    .header {
+        &__title {
+            margin-top: 26px;
+            font-size: 37px;
+            &-text {
+                max-width: 330px;
+                p {
+                    font-size: 17px;
+                    line-height: 30px;
+                }
+            }
+        }
+        &__btn {
+            margin-top: 210px;
+        }
+    }
+    .gallery {
+        padding: 38px 2px;
+        &__title {
+            font-size: 30px;
+            line-height: 39px;
+        }
+        &__mobile {
+            margin-top: 34px;
+        }
+    }
+    .about {
+        &__text {
+            text-align: center;
+            font-size: 16px;
+            line-height: 26px;
+            padding-top: 2px;
+            opacity: 1;
+        }
+        padding: 10px 10px;
+        &__title {
+            font-size: 37px;
+        }
+    }
+}
+
+@media (max-height: 440px) {
+    .mobile {
+        padding: 14px 16px 14px 16px;
+        &__nav-link {
+            margin-bottom: 10px;
+        }
+    }
+    .about {
+        height: 200vh;
     }
 }
 

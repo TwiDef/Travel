@@ -8,9 +8,11 @@ import 'owl.carousel';
 const mobileMenuBtn = document.querySelector('.mobile__menu-btn');
 const mobileMenu = document.querySelector('.mobile');
 
+
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
     mobileMenuBtn.classList.toggle('active');
+    document.querySelector('body').classList.toggle('scroll-none');
 });
 
 $(window).on('load resize', function() {
@@ -20,17 +22,12 @@ $(window).on('load resize', function() {
         $('.owl-carousel').owlCarousel({
             loop: true,
             items: 4,
-            autoplay: false,
+            autoplay: true,
             autoplayTimeout: 2000,
             smartSpeed: 500,
             autoplayHoverPause: true,
             responsiveClass: true,
             responsive: {
-                /* 0: {
-                    items: 1,
-                    autoWidth: true,
-                    margin: 20,
-                }, */
                 1000: {
                     items: 2,
                     margin: 20,
